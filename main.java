@@ -6,7 +6,7 @@ public class Main {
 		Scanner input = new Scanner(System.in);
 
 		while (cli_status) {
-			System.out.println("command: ")
+			System.out.println("command: ");
 			String command = input.nextLine();
 			switch(input) {
 				case "print2":
