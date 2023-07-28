@@ -65,12 +65,17 @@ git clone https://github.com/Markerist/iCare.git
 ## Contributing
 Contributions to iCare are welcome. If you find any issues or want to add new features, feel free to submit a pull request.
 
-Fork the project (click the Fork button in the top right corner)
-Create your feature branch (**git checkout -b feature/YourFeature**)
-Commit your changes (**git commit -m 'Add some feature'**)
-Push to the branch (**git push origin feature/YourFeature**)
-Open a pull request
-Please make sure to follow the [Contributing Guidelines](https://github.com/github/docs/blob/main/CONTRIBUTING.md) when contributing.
+- Fork the project (click the Fork button in the top right corner)
+
+- Create your feature branch (**git checkout -b feature/YourFeature**)
+
+- Commit your changes (**git commit -m 'Add some feature'**)
+
+- Push to the branch (**git push origin feature/YourFeature**)
+
+- Open a pull request
+
+- Please make sure to follow the [Contributing Guidelines](https://github.com/github/docs/blob/main/CONTRIBUTING.md) when contributing.
 
 ### License
 This project is licensed under the [MIT]([https://pages.github.com/]) License.
