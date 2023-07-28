@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+class Main {
 	public static void main(String[] args) {
 		boolean cli_status = true;
 		Scanner input = new Scanner(System.in);
@@ -8,7 +8,7 @@ public class Main {
 		while (cli_status) {
 			System.out.println("command: ");
 			String command = input.nextLine();
-			switch(input) {
+			switch(command) {
 				case "print2":
 					System.out.println("test");
 					break;
