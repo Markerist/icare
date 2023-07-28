@@ -73,4 +73,4 @@ Open a pull request
 Please make sure to follow the [Contributing Guidelines](https://github.com/github/docs/blob/main/CONTRIBUTING.md) when contributing.
 
 ### License
-This project is licensed under the [MIT]([https://pages.github.com/](https://chat.openai.com/LICENSE) License.
+This project is licensed under the [MIT]([https://pages.github.com/]) License.
