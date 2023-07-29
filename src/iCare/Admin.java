@@ -6,7 +6,7 @@ public class Admin extends Person
 {
 	Scanner sc = new Scanner(System.in);
 	
-	// This checks the number of doctors and based on the answer, makes a new unique id for the primary key
+	// This checks the number of doctors and based on the answer, makes a new unique ID for the primary key
 	private int AutoDoctorID()
 	{
 		int docid = 0;
@@ -27,7 +27,7 @@ public class Admin extends Person
 		return docid+1;
 	}
 	
-	// This just adds a new doctor based on the AutoDoctorID
+	// This function adds a new doctor based on the AutoDoctorID
 	public int addDoctor()
 	{
 		int DoctorID = AutoDoctorID();
@@ -81,7 +81,7 @@ public class Admin extends Person
 		{ System.out.println("\tEXCEPTION OCCURS");}  
 	}
 	
-	// This removes a doctor, only the admin can remove a doctor
+	// This removes a doctor only available to the admin
 	public void RemoveDoctor(int id)
 	{
 		try 
@@ -95,7 +95,8 @@ public class Admin extends Person
 		{ System.out.println("\tEXCEPTION OCCURS "+e.getMessage());}  
 	}
 	
-	public void ViewFeedback() //To view Feedback given by Patients. Admin can view all the feedback details//
+	//To view feedback given by Patients.
+	public void ViewFeedback() 
 	{
 		try 
 		{ 
@@ -112,7 +113,7 @@ public class Admin extends Person
 	{
 		try 
 		{
-			Connection con=ConnectionProvider.getCon();
+			Connection con = ConnectionProvider.getCon();
 			DBTablePrinter.printTable(con, "Appointments");
 		}
 		catch(Exception e)

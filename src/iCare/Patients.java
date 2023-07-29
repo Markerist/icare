@@ -153,6 +153,8 @@ public class Patients extends Person
 		}
     	
     }
+    
+    // Views the appointment history
     public void AppointmentHistory(int id) 
     {
     	int t = 0;
@@ -166,11 +168,11 @@ public class Patients extends Person
     			{
 	    			t++;
 	    			System.out.println("\tAPPOINTMENT NUMBER: "+t);
-					System.out.print("\tAppointment ID: "+rs.getInt(1)+"                          \n");
-					System.out.print("\tProblem: "+rs.getString(2)+"                       \n");
-					System.out.print("\tPatient ID: "+rs.getInt(3)+"                          \n");
-					System.out.print("\tDoctor ID: "+rs.getInt(5)+"                          \n");
-					System.out.print("\t																	  \n");	
+					System.out.print("\tAppointment ID: "+rs.getInt(1)+"					\n");
+					System.out.print("\tProblem: "+rs.getString(2)+"						\n");
+					System.out.print("\tPatient ID: "+rs.getInt(3)+"						\n");
+					System.out.print("\tDoctor ID: "+rs.getInt(5)+"							\n");
+					System.out.print("\t													\n");	
     			}
     		}
     		
@@ -185,7 +187,8 @@ public class Patients extends Person
 		}
     	
     }
-    /***********************************************************************************************/  
+
+    // Views the details of reports
     public void ViewReport(int id)
     {
     	int checkReport = 0;
@@ -195,13 +198,13 @@ public class Patients extends Person
 			ResultSet rs = st.executeQuery("select * from Reports where PatientID = "+id);
 			while(rs.next())
 			{
-				System.out.print("\tReport ID: "+rs.getInt(1)+"                          \n");
-				System.out.print("\tAppointment ID: "+rs.getInt(2)+"                          \n");
-				System.out.print("\tPatient ID: "+rs.getInt(3)+"                          \n");
-				System.out.print("\tDoctor ID: "+rs.getInt(4)+"                          \n");
-				System.out.print("\tMedicine Prescribed: "+rs.getString(5)+"                       \n");
-				System.out.print("\tDoctor's Message: "+rs.getString(6)+"                       \n");
-				System.out.print("\t															  		  \n");	
+				System.out.print("\tReport ID: "+rs.getInt(1)+"									\n");
+				System.out.print("\tAppointment ID: "+rs.getInt(2)+"							\n");
+				System.out.print("\tPatient ID: "+rs.getInt(3)+"								\n");
+				System.out.print("\tDoctor ID: "+rs.getInt(4)+" 								\n");
+				System.out.print("\tMedicine Prescribed: "+rs.getString(5)+"					\n");
+				System.out.print("\tDoctor's Message: "+rs.getString(6)+"						\n");
+				System.out.print("\t															\n");	
 				checkReport++;
 			}
     	}catch(Exception e) {
@@ -211,9 +214,9 @@ public class Patients extends Person
     			System.out.println("\tYou have no report generated.");
     	
     }
-    /***********************************************************************************************/ 
-    
-    public void Givefeedback(int id) /*To give Feedback*/
+
+    // Feedback Function
+    public void Givefeedback(int id)
     {
     	System.out.println("\tPlease fill in the following feedback form:");
     	int pid = id;
@@ -240,7 +243,5 @@ public class Patients extends Person
 			System.out.println(e.getMessage());
 		}
     }
-    /***********************************************************************************************/ 
-
 	
 }

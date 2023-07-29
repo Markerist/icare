@@ -9,48 +9,49 @@ create table Users(
 	primary key(userID,userType)
 );
 select * from Users;
-insert into Users ( userID , userType, Password)
+insert into Users ( userID, userType, Password)
 values
-(1,'Patient','One'),
-(2,'Patient','Two'),
-(3,'Patient','Three'),
-(4,'Patient','Four'),
-(5,'Patient','Five'),
-(6,'Patient','Six'),
-(7,'Patient','Seven'),
-(8,'Patient','Eight'),
-(9,'Patient','Nine'),
-(10,'Patient','Ten'),
-(11,'Patient','Eleven'),
-(12,'Patient','Twelve'),
-(13,'Patient','Thirteen'),
-(14,'Patient','Fourteen'),
-(15,'Patient','Fifteen'),
-(16,'Patient','Sixteen'),
-(17,'Patient','Seventeen'),
-(18,'Patient','Eighteen'),
-(19,'Patient','Nineteen'),
-(20,'Patient','Twenty'),
-(1,'Doctor','One'),
-(2,'Doctor','Two'),
-(3,'Doctor','Three'),
-(4,'Doctor','Four'),
-(5,'Doctor','Five'),
-(6,'Doctor','Six'),
-(7,'Doctor','Seven'),
-(8,'Doctor','Eight'),
-(9,'Doctor','Nine'),
-(10,'Doctor','Ten'),
-(11,'Doctor','Eleven'),
-(12,'Doctor','Twelve'),
-(13,'Doctor','Thirteen'),
-(14,'Doctor','Fourteen'),
-(15,'Doctor','Fifteen'),
-(16,'Doctor','Sixteen'),
-(17,'Doctor','Seventeen'),
-(18,'Doctor','Eighteen'),
-(19,'Doctor','Nineteen'),
-(20,'Doctor','Twenty');
+(1,'Patient','123'),
+(2,'Patient','123'),
+(3,'Patient','123'),
+(4,'Patient','123'),
+(5,'Patient','123'),
+(6,'Patient','123'),
+(7,'Patient','123'),
+(8,'Patient','123'),
+(9,'Patient','123'),
+(10,'Patient','123'),
+(11,'Patient','123'),
+(12,'Patient','123'),
+(13,'Patient','123'),
+(14,'Patient','123'),
+(15,'Patient','123'),
+(16,'Patient','123'),
+(17,'Patient','123'),
+(18,'Patient','123'),
+(19,'Patient','123'),
+(20,'Patient','123'),
+(1,'Doctor','123'),
+(2,'Doctor','123'),
+(3,'Doctor','123'),
+(4,'Doctor','123'),
+(5,'Doctor','123'),
+(6,'Doctor','123'),
+(7,'Doctor','123'),
+(8,'Doctor','123'),
+(9,'Doctor','123'),
+(10,'Doctor','123'),
+(11,'Doctor','123'),
+(12,'Doctor','123'),
+(13,'Doctor','123'),
+(14,'Doctor','123'),
+(15,'Doctor','123'),
+(16,'Doctor','123'),
+(17,'Doctor','123'),
+(18,'Doctor','123'),
+(19,'Doctor','123'),
+(20,'Doctor','123');
+
 /* Patients Table */
 create table Patients(
 	PatientID int not null,
@@ -87,6 +88,7 @@ values
 (19,"Manuel","delaRosa","M","9815215367",12,"PapiManuell100@gmail.com","B-","Cagayan de Oro City, Misamis Oriental"),
 (20,"Beatriz","Duterte","F","8358032156",27,"Beaduts124@gmail.com","O+","Davao City, Davao del Sur");
 select * from Patients;
+
 /* Doctor Table */
 create table Doctors(
 	DoctorID int not null,
@@ -123,6 +125,7 @@ values
 (19, "Rina", "Santos", "F", "8857638923", 24, "BDS", "Lungs", "rinasantos@gmail.com"),
 (20, "Gabriel", "Tolentino", "M", "8112857382", 40, "MBBS", "Heart", "gabrieltolentino@gmail.com");
 select * from Doctors;
+
 /* Appointments Table */
 create table Appointments
 (
@@ -141,6 +144,7 @@ create table Appointments
 	ON UPDATE CASCADE
 );
 SELECT * FROM Appointments;
+
 /* Reports Table */
 create table Reports
 (
@@ -156,6 +160,7 @@ create table Reports
 	ON UPDATE CASCADE
 );
 select * from Reports;
+
 /* Feedback Table */
 create table feedback
 (

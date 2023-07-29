@@ -21,7 +21,7 @@ public class Appointment
 	// Scanner object
 	Scanner sc = new Scanner(System.in);
 	
-	// This checks the number of doctors and based on the answer, makes a new unique id for the primary key
+	// This checks the number of doctors and based on the answer, makes a new unique ID for the primary key
 	private int AutoAppointmentID()
 	{
 		int appID = 0;
@@ -35,14 +35,15 @@ public class Appointment
 			{
 				return 1;
 			}
-		}catch(Exception e)
+		}
+		catch(Exception e)
 		{
 			System.out.println(e.getMessage());
 		}
 		return appID + 1;
 	}
 	
-	// This just adds a new appointment based on the AutoAppointmentID
+	// This adds a new appointment based on the AutoAppointmentID
 	public void BookAppointment(int id)
 
 	{
@@ -53,7 +54,6 @@ public class Appointment
 		System.out.print("\tEnter your problem: ");
 		Problem = sc.nextLine();
 		
-		/*choosing doctor */
 		Doctor_id = ChooseDoctor();
 		while(Doctor_id == 0)
 		{
@@ -62,7 +62,7 @@ public class Appointment
 		}
 		Doctor_Name = GetDoctorName(Doctor_id);
 		Doctor_Qualification = GetDoctorQualification(Doctor_id);
-		//conforming the doctor --
+
 		int d;
 		System.out.print("\t					\n");
 		System.out.println("\tPlease type 1 to confirm.");
@@ -75,7 +75,7 @@ public class Appointment
 		}	
 	}
 	
-	// 
+	// Function of Choosing a Doctor
 	private int ChooseDoctor()
 	{
 		System.out.print("\t					\n");
@@ -281,9 +281,10 @@ public class Appointment
 		    }
 		}
 	}
-	/***********************************************************************************************/ 
-	
-	private String GetDoctorName(int docID)/**/
+
+ 
+	// Takes the Doctors' Name
+	private String GetDoctorName(int docID)
 	{
 		String DoctorName = null;
 		try
@@ -300,7 +301,8 @@ public class Appointment
 		}
 		return DoctorName;
 	}
-	/***********************************************************************************************/ 
+
+	// Takes the Doctors' Qualifications
 	private String GetDoctorQualification(int docID)
 	{
 		String DoctorQualification = null;
@@ -318,8 +320,9 @@ public class Appointment
 		}
 		return DoctorQualification;
 	}
-	/***********************************************************************************************/ 
-	public void ConfirmAppointment()//This Method Add all details into appointment table of EHMS Database
+
+	// Adds all the details to the Appointment Table of the database
+	public void ConfirmAppointment()
 	{
 			try
 			{
@@ -335,5 +338,4 @@ public class Appointment
 			}
 
 	}
-	/***********************************************************************************************/ 
 }

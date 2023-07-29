@@ -6,7 +6,7 @@ public class Register
 {
 
 	// Registration Function for Patients
-	public void patient_Registration(int pid,String fn,String ln,String G,String cn,int age,String Eid,String BloodGroup,String Address)
+	public void patient_Registration(int pid, String fn, String ln, String G, String cn, int age, String Eid, String BloodGroup, String Address)
 	{
 		try 
 		{
@@ -23,7 +23,7 @@ public class Register
 	}
 	
 	// Registration Function for Doctors
-	public void doctor_Registration(int docid,String fn,String ln,String G,String cn,int age,String Q,String dt,String ed)
+	public void doctor_Registration(int docid, String fn, String ln, String G, String cn, int age, String Q, String dt, String ed)
 	{
 		try 
 		{

@@ -190,10 +190,11 @@ public class Main
 		    	        System.out.print("\t1. View Profile					\n");
 		    	        System.out.print("\t2. View Doctors					\n");
 		    	        System.out.print("\t3. Book Appointments			\n");
-		    	        System.out.print("\t4. View Appointments			\n");
-		    	        System.out.print("\t5. View Completed Appointments	\n");
-		    	        System.out.print("\t6. Give Feedback                \n");
-		    	        System.out.print("\t7. Logout						\n");
+		    	        System.out.print("\t4. View Diagnose Reports		\n");
+		    	        System.out.print("\t5. View Appointments			\n");
+		    	        System.out.print("\t6. View Completed Appointments	\n");
+		    	        System.out.print("\t7. Give Feedback                \n");
+		    	        System.out.print("\t8. Logout						\n");
 		    	        System.out.print("\t								\n");
 		    	        System.out.print("\tYour Choice: ");
 		    			int ch=sc.nextInt();
@@ -223,23 +224,28 @@ public class Main
 		    				}
 		    				case 4:
 		    				{
+		    					p.ViewReport(id);
+		    					break;
+		    				}
+		    				case 5:
+		    				{
 		    					// This function views the appointment made for the doctor
 		    					p.viewAppointment(id);
 		    					break;
 		    				}
-		    				case 5:
+		    				case 6:
 		    				{
 		    					// This views the history of appointments made by the patient
 		    					p.AppointmentHistory(id);
 		    					break;
 		    				}
-		    				case 6:
+		    				case 7:
 		    				{
 		    					p.Givefeedback(id);
 		    					break;
 		    					
 		    				}
-		    				case 7:
+		    				case 8:
 		    				{
 		    					// This exits the Patient Portal
 		    					checkPatient = true;
@@ -343,12 +349,15 @@ public class Main
 		    				{
 		    					System.out.println("\tSelect an option.");
 		    				}
-		    			}//end of switch.
+		    			}
+		    			// end of switch.
 		    			if(checkDoctor)
 		    				break;
-		    		}//end of while
+		    		}
+		    		// end of while
 		    			break;
-		    	}//end of if
+		    	}
+		    	// end of if
 		    	else {
 		    		System.out.println("\tInvalid username or password.");
 		    	}
@@ -375,9 +384,11 @@ public class Main
 		    {
 		    	System.out.println("\tPlease choose a valid option.");
 		    }
-		}//end of switch
+		}
+		//end of switch
 		if(check)
 			break;
-		}//end of while loop
+		}
+		//end of while loop
 	}
 }

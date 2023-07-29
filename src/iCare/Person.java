@@ -3,6 +3,7 @@ import java.util.Date;
 import java.util.Scanner;
 public class Person 
 {
+	// Variable Declarations
 	protected String First_Name;
 	protected String Last_Name;
 	protected String Email_Address;

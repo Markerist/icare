@@ -1,4 +1,3 @@
-/**********************************************************|Doctor Class|*********************************************************/
 package iCare;
 import java.sql.*;
 import java.sql.Connection;
@@ -8,12 +7,14 @@ import java.sql.Statement;
 import java.util.Scanner;
 public class Doctor extends Person
 {
-	int docid;//DoctorID
-	String Doctor_Type;//Type of doctor
-	String Qualification;//
+	// Variable Declarations
+	int docid;
+	String Doctor_Type;
+	String Qualification;
 	int Entry_Charge;
 	Scanner sc = new Scanner(System.in);
-	/***********************************************************************************************/ 
+
+	// Doctor Registration
 	public void DoctorRegistration(int docid)
 	{
 		System.out.println("\tPlease enter the following details:\n");
@@ -80,10 +81,11 @@ public class Doctor extends Person
 				
 		}
 		Register reg = new Register();
-    	reg.doctor_Registration(docid,First_Name,Last_Name,Gender,CN,age,Qualification,Doctor_Type,Email_Address);//change the database
+    	reg.doctor_Registration(docid, First_Name, Last_Name, Gender, CN, age, Qualification, Doctor_Type, Email_Address);
 	}
-	/***********************************************************************************************/ 
-	public void ShowDoctorDetails(int d)//This function Show All Details Of the doctor//
+
+	// Shows all the Doctors' details
+	public void ShowDoctorDetails(int d)
 	{
 		try {
     		Connection con = ConnectionProvider.getCon();
@@ -104,7 +106,7 @@ public class Doctor extends Person
     		System.out.println(e.getMessage());
     	}
 	}
-	/***********************************************************************************************/ 
+	// Views the Doctors' Appointment details
 	public void viewAppointment(int docid)
 	{
 		int t = 0;
@@ -116,10 +118,10 @@ public class Doctor extends Person
     		{
 	    			t++;
 	    			System.out.println("\tAPPOINTMENT NUMBER: "+t);
-					System.out.print("\tAppointment ID: "+rs.getInt(1)+"                          \n");
-					System.out.print("\tProblem: "+rs.getString(2)+"                       \n");
-					System.out.print("\tPatient ID: "+rs.getInt(3)+"                          \n");
-					System.out.print("\t																	  \n");	
+					System.out.print("\tAppointment ID: "+rs.getInt(1)+"					\n");
+					System.out.print("\tProblem: "+rs.getString(2)+"						\n");
+					System.out.print("\tPatient ID: "+rs.getInt(3)+"						\n");
+					System.out.print("\t													\n");	
     		}
     	}
     	catch(Exception e)
@@ -129,7 +131,7 @@ public class Doctor extends Person
 		if(t == 0)
 			System.out.println("\tYou currently don't have any appointment.");
 	}
-	/***********************************************************************************************/ 
+	// Checks if the Doctor has upcoming Appointments
 	int Appointment_checker(int appid,int docid)
 	{
 		try {
@@ -147,9 +149,8 @@ public class Doctor extends Person
 		return 0;
 	}
 	
-	/***********************************************************************************************/
-	
-	public void DiagnosePatient(int id)//Check patient//
+	// Diagnosing of Patient
+	public void DiagnosePatient(int id)
 	{
 		while(true)
 		{
@@ -179,7 +180,6 @@ public class Doctor extends Person
 				System.out.println("                       ");
 				System.out.println("\tWrong Appointment ID.");
 				System.out.println("                       ");
-				//boolean leave=false;
 				System.out.println("\tPlease enter 1 to exit.");
 				System.out.print("\tYour choice: ");
 				if(sc.nextInt() == 1)
@@ -190,8 +190,7 @@ public class Doctor extends Person
 		
 	}
 	
-	/***********************************************************************************************/ 
-	
+	// Connecting Patient ID
 	private int GetPatientID(int appid)
 	{
 		int pid = 0;
@@ -210,7 +209,5 @@ public class Doctor extends Person
 		}
 		return pid;
 	}
-	
-	 /***********************************************************************************************/ 
 	
 }

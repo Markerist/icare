@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class Report
 {
+	// Variable Declaration
 	Scanner input = new Scanner(System.in);
 	private int RepId;
 	private int pid;
@@ -14,8 +15,9 @@ public class Report
 	private int docid;
 	private String MedicinePrescribed;
 	private String DoctorsComment;
-	/***********************************************************************************************/ 
-	private int AutoReportID()/**/
+
+	// This checks the number of reports and based on the answer, makes a new unique ID for the primary key
+	private int AutoReportID()
 	{
 		int repID = 0;
 		try{
@@ -34,8 +36,9 @@ public class Report
 		}
 		return repID+1;
 	}
-	/***********************************************************************************************/ 
-	public void DiagnoseReport(int pid,int appid,int docid)/*This Method*/
+
+	// Diagnosing Function
+	public void DiagnoseReport(int pid,int appid,int docid)
 	{
 		RepId = AutoReportID();
 		System.out.println("\tReportID: "+RepId);
@@ -61,8 +64,9 @@ public class Report
 			System.out.println("Invalid details.");	
 		}
 	}
-	/***********************************************************************************************/ 
-	public void GenerateReport()/**/
+
+	// Generates the report and inserts it into the database
+	public void GenerateReport()
 	{
 		try {
 			Connection con = ConnectionProvider.getCon();
@@ -75,7 +79,9 @@ public class Report
 			System.out.println(e.getMessage());
 		}
 	}
-	private void ChangeStatus()//changes the status of appointment from pending to completed
+	
+	// Changes the status of appointment from pending to completed
+	private void ChangeStatus()
 	{
 		try {
 			Connection con = ConnectionProvider.getCon();
@@ -87,8 +93,9 @@ public class Report
 			System.out.println("e.getMessage()");
 		}
 	}
-	/***********************************************************************************************/ 
-	public void ShowReport()/*Shows all reports that are being generated*/
+
+	// Shows all report that are generated
+	public void ShowReport()
 	{
 		try 
 		{
@@ -98,5 +105,4 @@ public class Report
 		catch(Exception e)
 		{ System.out.println("EXCEPTION OCCURS"+e.getMessage());}  
 	}
-	/***********************************************************************************************/ 
 }
